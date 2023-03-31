@@ -73,7 +73,7 @@ void q_short(int low, int high)
 		q_short(j + 1, high); // langkah 13
 	}
 
-void display() {
+	void display() {
 		cout << "\n-------------" << endl;
 		cout << "\n-sorted array" << endl;
 		cout << "\n-------------" << endl;
@@ -82,3 +82,10 @@ void display() {
 		{
 			cout << arr[i] << " ";
 		}
+		cout << "\n\n\Number of comparisons; " << cmp_count << endl;
+		cout << "Number of data movemen: " << mov_count << endl;
+	    }
+
+
+	
+
