@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-// array of integrers to hold values
+//array of integrers to hold values
 int arr[20];
 int cmp_count = 0; // number of comparison
 int mov_count = 0; // number of movement
@@ -25,11 +25,11 @@ void input() {
 
 	for (int i = 0; i < n; i++)
 	{
-		cout << "<" << (i + 1) << "<";
+		cout << "<" << (i + 1) << ">";
 		cin >> arr[i];
 	}
 }
-// Swap the element at index x with the element at index y
+// swap the element at index x with the element at index y
 void swap(int x, int y)
 {
 	int temp;
@@ -42,4 +42,11 @@ void q_short(int low, int high)
 	int pivot, i, j;
 	if (low > high) // langkah 1
 		return;
-}
+
+	
+	// partition the list into two parts
+	// one containing element less that or equal to pivot
+	// outher containing element greather than pivot 
+	i = low + 1; // langkah 3
+	j = high; // langkah 4
+	pivot = arr[low]; // langkah 2
