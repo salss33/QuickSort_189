@@ -67,9 +67,11 @@ void q_short(int low, int high)
 			swap(i, j);
 			mov_count++;
 		}
+	}
+	// j now containt the index of the last element in the sort list
 		// sort the list on the left of pivot using quick sort
 		q_short[low, j - 1]; // langkah 12
-		// short the list on the right of pivot using  quick short
+		// short the list on the right of pivot using quick short
 		q_short(j + 1, high); // langkah 13
 	}
 
@@ -102,6 +104,16 @@ void q_short(int low, int high)
 		cout << "\n\nNumber of comparisions: " << cmp_count << endl;
 		cout << "Number of data movemen: " << mov_count << endl;
 	    }
+
+	int main() {
+		input();
+		// sort the array using quick sort
+		q_short(0, n - 1);
+		display();
+		system("pause");
+
+		return;
+	}
 
 	
 
